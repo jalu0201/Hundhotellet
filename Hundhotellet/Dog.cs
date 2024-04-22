@@ -10,11 +10,13 @@ namespace Hundhotellet
     {
         public string name;
         public string chipNumber;
+        public Owner owner;
 
-        public Dog(string n, string c)
+        public Dog(string n, string c, Owner o)
         {
-         name = n;
+            name = n;
             chipNumber = c;
+            owner = o;
         }
     }
 }
