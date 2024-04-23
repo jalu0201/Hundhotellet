@@ -19,18 +19,35 @@ namespace Hundhotellet
         }
         public void PrintInfo()
         {
-         for (int i = 0; i < dogArray.Length; i++)
+            for (int i = 0; i < dogArray.Length; i++)
             {
-            Dog dog = dogArray[i];
-                if (dog!= null)
+                Dog dog = dogArray[i];
+                if (dog != null)
                 {
-                    Console.WriteLine("Bur " + i + ": " + dog.name +" " + "Ägare: " +
+                    Console.WriteLine("Bur " + i + ": " + dog.name + " " + "Ägare: " +
                         dog.owner.firstName + " " + dog.owner.lastName + " " + dog.owner.adress.gatuAdress + " "
-                        + dog.owner.adress.stad +" "+ dog.owner.adress.postnummer);
+                        + dog.owner.adress.stad + " " + dog.owner.adress.postnummer);
                 }
-            }        
+            }
         }
 
+        public void PrintFeedingSchedule()
+        {
+            for (int i = 0; i < dogArray.Length; i++)
+            {
+                Dog dog = dogArray[i];
 
+                if (dog != null)
+                {
+                    Console.WriteLine("Bur " + i + ": " + dog.name);
+                    foreach (Meal meal in dog.mealList)
+                    {
+                        Console.WriteLine(meal.ToString());
+                    }
+                }
+            }
+
+
+        }
     }
 }
