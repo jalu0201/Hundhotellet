@@ -13,13 +13,16 @@ namespace Hundhotellet
         public string chipNumber;
         public Owner owner;
         public List<Meal> mealList = new List<Meal>();
+        public Visit visit;
 
 
-        public Dog(string n, string c, Owner o)
+
+        public Dog(string n, string c, Owner o, Visit v)
         {
             name = n;
             chipNumber = c;
             owner = o;
+            visit = v;
             
         }
 
