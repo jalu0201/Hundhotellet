@@ -14,6 +14,9 @@ namespace Hundhotellet
             dogHotel.PrintFeedingSchedule();
             Console.WriteLine("\n\rVisitTime");
             dogHotel.PrintPickups();
+            Console.WriteLine("\n\rInvoice");
+            dogHotel.PrintInvoice();
+
         }
         static void AddTestData(DogHotel dogHotel)
         {
